@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<mxfile>
+  <diagram name="Olimpiadas">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Entidades -->
+        <mxCell id="SEDE" value="SEDE" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPLEJO" value="COMPLEJO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="EVENTO" value="EVENTO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="200" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMISARIO" value="COMISARIO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="360" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Relaciones -->
+        <mxCell id="rel1" edge="1" parent="1" source="SEDE" target="COMPLEJO" style="endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="COMPLEJO" target="EVENTO" style="endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="EVENTO" target="COMISARIO" style="endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
