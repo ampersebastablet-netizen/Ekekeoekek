@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="ER Chen Olimpiadas" id="er-chen-olimpiadas">
+    <mxGraphModel dx="1000" dy="800">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ===== ENTIDADES ===== -->
+        <mxCell id="SEDE" value="SEDE" style="shape=rectangle;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPLEJO" value="COMPLEJO" style="shape=rectangle;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="EVENTO" value="EVENTO" style="shape=rectangle;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMISARIO" value="COMISARIO" style="shape=rectangle;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="EQUIP" value="EQUIPAMIENTO" style="shape=rectangle;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480" y="220" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="MANT" value="MANTENIMIENTO" style="shape=rectangle;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="700" y="220" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="TIPO" value="TIPO_SEDE" style="shape=rectangle;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="60" y="220" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== RELACIONES (rombos) ===== -->
+        <mxCell id="PERTENECE" value="PERTENECE" style="shape=rhombus;perimeter=rhombusPerimeter;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="180" y="60" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="CELEBRA" value="CELEBRA" style="shape=rhombus;perimeter=rhombusPerimeter;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="380" y="60" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="PARTICIPA" value="PARTICIPA" style="shape=rhombus;perimeter=rhombusPerimeter;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="600" y="60" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="USA" value="USA" style="shape=rhombus;perimeter=rhombusPerimeter;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="MANTIENE" value="MANTIENE" style="shape=rhombus;perimeter=rhombusPerimeter;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="600" y="150" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLASIFICA" value="CLASIFICA" style="shape=rhombus;perimeter=rhombusPerimeter;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="180" y="220" width="90" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== ATRIBUTOS (ejemplo para SEDE) ===== -->
+        <mxCell id="SedeID" value="SedeID (PK)" style="shape=ellipse;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="SedeNombre" value="Nombre" style="shape=ellipse;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="SedeLoc" value="Localización" style="shape=ellipse;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="0" y="150" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== CONEXIONES (líneas) ===== -->
+        <!-- Entidad-Relación -->
+        <mxCell id="l1" edge="1" parent="1" source="SEDE" target="PERTENECE" style="endArrow=none;"/>
+        <mxCell id="l2" edge="1" parent="1" source="PERTENECE" target="COMPLEJO" style="endArrow=none;"/>
+        <mxCell id="l3" edge="1" parent="1" source="COMPLEJO" target="CELEBRA" style="endArrow=none;"/>
+        <mxCell id="l4" edge="1" parent="1" source="CELEBRA" target="EVENTO" style="endArrow=none;"/>
+        <mxCell id="l5" edge="1" parent="1" source="EVENTO" target="PARTICIPA" style="endArrow=none;"/>
+        <mxCell id="l6" edge="1" parent="1" source="PARTICIPA" target="COMISARIO" style="endArrow=none;"/>
+        <mxCell id="l7" edge="1" parent="1" source="EVENTO" target="USA" style="endArrow=none;"/>
+        <mxCell id="l8" edge="1" parent="1" source="USA" target="EQUIP" style="endArrow=none;"/>
+        <mxCell id="l9" edge="1" parent="1" source="MANT" target="MANTIENE" style="endArrow=none;"/>
+        <mxCell id="l10" edge="1" parent="1" source="MANTIENE" target="COMPLEJO" style="endArrow=none;"/>
+        <mxCell id="l11" edge="1" parent="1" source="TIPO" target="CLASIFICA" style="endArrow=none;"/>
+        <mxCell id="l12" edge="1" parent="1" source="CLASIFICA" target="SEDE" style="endArrow=none;"/>
+
+        <!-- Atributos conectados -->
+        <mxCell id="a1" edge="1" parent="1" source="SedeID" target="SEDE" style="endArrow=none;"/>
+        <mxCell id="a2" edge="1" parent="1" source="SedeNombre" target="SEDE" style="endArrow=none;"/>
+        <mxCell id="a3" edge="1" parent="1" source="SedeLoc" target="SEDE" style="endArrow=none;"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
