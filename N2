@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Olimpiadas">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ===== ENTIDADES PRINCIPALES ===== -->
+        <mxCell id="SEDE" value="SEDE" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="TIPO_SEDE" value="TIPO_SEDE" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPLEJO" value="COMPLEJO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="EVENTO" value="EVENTO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMISARIO" value="COMISARIO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="EQUIPAMIENTO" value="EQUIPAMIENTO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="480" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="MANTENIMIENTO" value="MANTENIMIENTO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="300" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== SUBTIPOS COMPLEJO ===== -->
+        <mxCell id="DEP_UNICO" value="DEPORTE ÚNICO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="POLIDEPORTIVO" value="POLIDEPORTIVO" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="AREA" value="ÁREA" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="300" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Triángulo is-a -->
+        <mxCell id="ISA" value="is-a" style="shape=triangle;direction=north;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="140" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== RELACIONES ===== -->
+        <mxCell id="r1" value="CLASIFICA" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="60" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" value="PERTENECE" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="140" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" value="CELEBRA" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="280" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4" value="PARTICIPA" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="420" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5" value="USA" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="420" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="r6" value="MANTIENE" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="240" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="r7" value="TIENE" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="250" width="100" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== CONEXIONES ===== -->
+        <mxCell edge="1" parent="1" source="SEDE" target="r1" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="TIPO_SEDE" target="r1" style="endArrow=none;"/>
+
+        <mxCell edge="1" parent="1" source="SEDE" target="r2" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="COMPLEJO" target="r2" style="endArrow=none;"/>
+
+        <mxCell edge="1" parent="1" source="COMPLEJO" target="r3" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="EVENTO" target="r3" style="endArrow=none;"/>
+
+        <mxCell edge="1" parent="1" source="EVENTO" target="r4" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="COMISARIO" target="r4" style="endArrow=none;"/>
+
+        <mxCell edge="1" parent="1" source="EVENTO" target="r5" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="EQUIPAMIENTO" target="r5" style="endArrow=none;"/>
+
+        <mxCell edge="1" parent="1" source="MANTENIMIENTO" target="r6" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="COMPLEJO" target="r6" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="MANTENIMIENTO" target="r5" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="EQUIPAMIENTO" target="r5" style="endArrow=none;"/>
+
+        <!-- ISA connections -->
+        <mxCell edge="1" parent="1" source="COMPLEJO" target="ISA" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="ISA" target="DEP_UNICO" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="ISA" target="POLIDEPORTIVO" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="POLIDEPORTIVO" target="r7" style="endArrow=none;"/>
+        <mxCell edge="1" parent="1" source="AREA" target="r7" style="endArrow=none;"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
